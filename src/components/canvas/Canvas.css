@@ -1,0 +1,43 @@
+.ares-canvas-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+.ares-canvas-container .react-flow {
+  background: var(--bg-primary);
+}
+
+.ares-canvas-container .react-flow__background {
+  background-color: var(--bg-primary);
+}
+
+.ares-canvas-container .react-flow__background circle {
+  fill: var(--border-color);
+}
+
+.ares-canvas-container .react-flow__controls {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.ares-canvas-container .react-flow__controls button {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.ares-canvas-container .react-flow__controls button:hover {
+  background: var(--bg-hover);
+  color: var(--accent-primary);
+}
+
+.ares-canvas-container .react-flow__minimap {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
