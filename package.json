@@ -1,0 +1,41 @@
+{
+  "name": "ares-x",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Enterprise Visual Workflow Workbench",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "test": "vitest"
+  },
+  "keywords": [
+    "workflow",
+    "visual",
+    "enterprise",
+    "automation"
+  ],
+  "author": "neo1x1",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@xyflow/react": "^12.1.0",
+    "zustand": "^4.5.0",
+    "nanoid": "^5.0.0",
+    "react-icons": "^5.0.1",
+    "lucide-react": "^0.408.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "vitest": "^1.1.0",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/jest-dom": "^6.1.5"
+  }
+}
