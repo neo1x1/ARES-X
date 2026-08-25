@@ -1,5 +1,4 @@
 :root {
-  /* Palette */
   --bg-primary: #050B11;
   --bg-secondary: #0A1419;
   --bg-tertiary: #0F1E2E;
@@ -18,7 +17,6 @@
   --border-color: #1E3A52;
   --border-color-light: #2A4A62;
 
-  /* Spacing */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 12px;
@@ -26,20 +24,17 @@
   --spacing-xl: 24px;
   --spacing-2xl: 32px;
 
-  /* Border radius */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-full: 9999px;
 
-  /* Z-index */
   --z-canvas: 1;
   --z-panels: 10;
   --z-dialog: 100;
   --z-notification: 1000;
   --z-tooltip: 50;
 
-  /* Transitions */
   --transition-fast: 100ms ease-out;
   --transition-normal: 200ms ease-out;
   --transition-slow: 300ms ease-out;
@@ -67,7 +62,6 @@ html, body {
   height: 100%;
 }
 
-/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -86,7 +80,6 @@ html, body {
   background: var(--text-muted);
 }
 
-/* Focus styles */
 :focus-visible {
   outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
@@ -96,7 +89,6 @@ button:focus-visible {
   outline-offset: -2px;
 }
 
-/* Selection */
 ::selection {
   background: var(--accent-primary);
   color: var(--bg-primary);

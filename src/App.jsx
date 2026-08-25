@@ -19,7 +19,6 @@ function App() {
   const projectStatus = useWorkflowStore((state) => state.projectStatus);
   const projectName = useWorkflowStore((state) => state.projectName);
 
-  // Load panel widths from localStorage
   useEffect(() => {
     const saved = localStorage.getItem('ares-x-panel-widths');
     if (saved) {
@@ -34,7 +33,6 @@ function App() {
     }
   }, []);
 
-  // Save panel widths to localStorage
   useEffect(() => {
     localStorage.setItem(
       'ares-x-panel-widths',
