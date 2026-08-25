@@ -1,0 +1,86 @@
+.ares-statusbar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  height: 28px;
+  padding: 0 var(--spacing-lg);
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  flex-shrink: 0;
+  font-size: 11px;
+}
+
+.status-section {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  white-space: nowrap;
+}
+
+.status-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.status-value {
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: rgba(53, 202, 255, 0.1);
+}
+
+.status-value.idle {
+  color: var(--text-muted);
+  background: transparent;
+}
+
+.status-value.running {
+  color: var(--accent-primary);
+  background: rgba(53, 202, 255, 0.15);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.status-value.success {
+  color: var(--accent-success);
+  background: rgba(77, 217, 160, 0.1);
+}
+
+.status-value.failed {
+  color: var(--accent-error);
+  background: rgba(255, 101, 117, 0.1);
+}
+
+.status-value.stopped {
+  color: var(--accent-warning);
+  background: rgba(255, 209, 102, 0.1);
+}
+
+.status-value.saved {
+  color: var(--accent-success);
+  background: rgba(77, 217, 160, 0.1);
+}
+
+.status-value.unsaved {
+  color: var(--accent-warning);
+  background: rgba(255, 209, 102, 0.1);
+}
+
+.status-value.error {
+  color: var(--accent-error);
+  background: rgba(255, 101, 117, 0.1);
+}
+
+.status-value.warning {
+  color: var(--accent-warning);
+  background: rgba(255, 209, 102, 0.1);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
