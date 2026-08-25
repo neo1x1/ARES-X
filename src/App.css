@@ -1,0 +1,100 @@
+.ares-app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.ares-main-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  gap: 1px;
+  background: var(--border-color);
+}
+
+.ares-sidebar-left {
+  flex-shrink: 0;
+  width: 280px;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.ares-sidebar-left-handle {
+  position: absolute;
+  right: -4px;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  cursor: col-resize;
+  background: transparent;
+  z-index: 20;
+}
+
+.ares-sidebar-left-handle:hover {
+  background: var(--accent-primary);
+}
+
+.ares-canvas-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+.ares-sidebar-right {
+  flex-shrink: 0;
+  width: 320px;
+  background: var(--bg-secondary);
+  border-left: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.ares-sidebar-right-handle {
+  position: absolute;
+  left: -4px;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  cursor: col-resize;
+  background: transparent;
+  z-index: 20;
+}
+
+.ares-sidebar-right-handle:hover {
+  background: var(--accent-primary);
+}
+
+.ares-console-container {
+  flex-shrink: 0;
+  height: 200px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.ares-console-handle {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  cursor: row-resize;
+  background: transparent;
+  z-index: 20;
+}
+
+.ares-console-handle:hover {
+  background: var(--accent-primary);
+}
