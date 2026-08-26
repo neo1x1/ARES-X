@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useWorkflowStore } from './state/workflowStore';
+import { useSettingsStore } from './state/settingsStore';
+import { initializeNodeRegistry } from './registry/nodeRegistry';
 import TopBar from './components/TopBar';
 import LeftSidebar from './components/LeftSidebar';
 import Canvas from './components/canvas/Canvas';
@@ -18,8 +20,14 @@ function App() {
   const [showConsole, setShowConsole] = useState(false);
   const projectStatus = useWorkflowStore((state) => state.projectStatus);
   const projectName = useWorkflowStore((state) => state.projectName);
+  const loadSettings = useSettingsStore((state) => state.loadSettings);
 
+  // Initialize registry and load settings on mount
   useEffect(() => {
+    initializeNodeRegistry();
+    loadSettings();
+
+    // Load panel widths from localStorage
     const saved = localStorage.getItem('ares-x-panel-widths');
     if (saved) {
       try {
@@ -31,8 +39,9 @@ function App() {
         console.error('Failed to load panel widths:', e);
       }
     }
-  }, []);
+  }, [loadSettings]);
 
+  // Save panel widths to localStorage
   useEffect(() => {
     localStorage.setItem(
       'ares-x-panel-widths',
